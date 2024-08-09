@@ -1,0 +1,23 @@
+.sort {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.item {
+  padding: 10px 20px;
+  background-color: #00838f;
+  border-radius: 10px;
+  color: white;
+  transition: 0.3s ease;
+
+  &:hover {
+    transition: 0.3s ease;
+    background-color: #004b52;
+    cursor: pointer;
+  }
+}
+
+.active {
+  background-color: #004b52;
+}

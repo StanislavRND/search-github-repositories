@@ -1,0 +1,44 @@
+.title {
+	font-size: 1.6rem;
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+.desc {
+	font-size: 1.2rem;
+	margin-bottom: 20px;
+}
+
+.flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+}
+.lisence {
+	font-size: 1.2rem;
+}
+.language {
+	background-color: #2196F3;
+	padding: 5px 10px;
+	border-radius: 5px;
+	display: inline-block;
+	color: white;
+	height: 30px;
+}
+.flex__direction {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.forks {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	font-size: 1.1rem;
+}
+.stars {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	font-size: 1.1rem;
+}
