@@ -22,6 +22,7 @@ export const sortedGithubApi = createApi({
           updated_at: repo.updated_at,
           description: repo.description,
           license: repo.license,
+					svn_url: repo.svn_url
         })),
       }),
     }),

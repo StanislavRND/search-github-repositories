@@ -8,7 +8,7 @@ type PropsDrawer = {
   open: boolean;
   toggleDrawer: (newOpen: boolean) => () => void;
   selectedRepo: Repository | null;
-};
+}
 
 const DrawerRight = ({ open, toggleDrawer, selectedRepo }: PropsDrawer) => {
   return (
@@ -48,6 +48,9 @@ const DrawerRight = ({ open, toggleDrawer, selectedRepo }: PropsDrawer) => {
         <div className={styles.lisence}>
           {selectedRepo?.license?.name ? selectedRepo.license.name : 'Нет лицензии'}
         </div>
+				<div className={styles.link}>
+					<a href={selectedRepo?.svn_url} target="_blank">{selectedRepo?.svn_url}</a>
+				</div>
       </Drawer>
     </>
   );

@@ -42,3 +42,17 @@
 	gap: 5px;
 	font-size: 1.1rem;
 }
+.link {
+	margin-top: 20px;
+	a {
+		color: #2196F3;
+		display: inline-block;
+		transition: 0.3s ease;
+
+		&:hover {
+			transform: scale(1.01);
+			transition: 0.3s ease;
+			color: #0c77ce;
+		}
+	}
+}

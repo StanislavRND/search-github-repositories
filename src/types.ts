@@ -13,4 +13,5 @@ export interface Repository {
 	updated_at: string;
 	description: string;
 	license: { key: string; name: string; spdx_id: string; url: string; node_id: string } | null;
+	svn_url: string
 }

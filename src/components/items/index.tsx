@@ -34,7 +34,7 @@ export const Items = ({ repoName, handleRepoClick }: ItemsProps) => {
   );
 
   // Показывает страницу, на которой находиммся
-  const handleChangePage = (event: React.MouseEvent<HTMLButtonElement> | null, newPage: number) => {
+  const handleChangePage = (_event: React.MouseEvent<HTMLButtonElement> | null, newPage: number) => {
     setPage(newPage);
   };
 
@@ -46,10 +46,15 @@ export const Items = ({ repoName, handleRepoClick }: ItemsProps) => {
     setPage(0);
   };
 
+	// Определяет выбранный фильтр сортировки 
   const handleSortChange = (index: number) => {
     setActiveSort(index);
-    setPage(0);
   };
+
+	// Обработка ошибки, если репозитории не найдены
+ if (data?.items.length === 0) {
+	return <div className={styles.error}>К сожалению ничего не найдено... 😞</div>
+ }
 
   return (
     <div className={`${styles.container} _container`}>
@@ -65,9 +70,9 @@ export const Items = ({ repoName, handleRepoClick }: ItemsProps) => {
 
       {/* Обработка ошибок */}
       {error && (
-        <div>
+        <div className={styles.error__empty}>
           <p>Что-то произошло не так... 😞</p>
-          {/* Убираем данные при ошибке */}
+					<p>Попробуйте обновить страницу</p>
         </div>
       )}
 
